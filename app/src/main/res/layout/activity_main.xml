@@ -1,18 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/primary_light"
     tools:context=".MainActivity">
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true">
+    <ImageView
+        android:id="@+id/logo_img"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/logo"
+        android:contentDescription="Logo" />
+
+    <ImageView
+        android:id="@+id/homeAsset1"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:layout_below="@id/logo_img"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/welcome_screen1"
+        android:contentDescription="Human With Book" />
 
     <TextView
+        android:id="@+id/welcome_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_below="@id/homeAsset1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/agencyb"
+        android:text="WELCOME TO"
+        android:textColor="@color/black"
+        android:textSize="40sp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/dropbook_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/welcome_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/agencyb"
+        android:text="BOOK DROP"
+        android:textColor="@color/primary"
+        android:textSize="42sp" />
+
+    <TextView
+        android:id="@+id/tag_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dropbook_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/agencyr"
+        android:text="A PROPER LIBRARY MANAGEMENT SYSTEM"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/getStarted_btn"
+        android:layout_below="@id/tag_line"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/agencyb"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:text="Get Started"
+        app:backgroundTint="@color/accent"
+        />
+</RelativeLayout>
+
+
+</RelativeLayout>
